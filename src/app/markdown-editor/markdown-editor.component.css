@@ -1,0 +1,28 @@
+.toolbar {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+}
+
+.editor-container {
+  margin-bottom: 20px;
+}
+
+.preview-container {
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+textarea {
+  font-family: monospace;
+  font-size: 14px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}

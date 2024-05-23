@@ -1,0 +1,38 @@
+<div class="tabs">
+  <button
+    (click)="selectedTab = 'editor'"
+    [disabled]="selectedTab === 'editor'"
+  >
+    Edit
+  </button>
+  <button
+    (click)="selectedTab = 'preview'"
+    [disabled]="selectedTab === 'preview'"
+  >
+    Preview
+  </button>
+</div>
+
+<!-- Editor -->
+@if (selectedTab === 'editor') {
+<div class="editor-container">
+  <textarea
+    #markdownTextarea
+    [(ngModel)]="markdown"
+    rows="40"
+    cols="100"
+    placeholder="Enter Markdown text here..."
+  ></textarea>
+</div>
+<div class="toolbar">
+  <button (click)="addFormat('bold')">Bold</button>
+  <button (click)="addFormat('italic')">Italic</button>
+</div>
+}
+
+<!-- Preview -->
+@if (selectedTab === 'preview') {
+<div class="preview-container">
+  <markdown [data]="markdown"></markdown>
+</div>
+}
